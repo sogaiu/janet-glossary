@@ -68,6 +68,14 @@ linguistic peculiarity of English (^^;
     between threads.  XXX: limits of the sorts of things that can be
     transferred is not so clear.
 
+* closure - XXX: roughly, code + chain of environments
+  XXX: possibly has useful content: https://www.lua.org/pil/6.1.html
+
+  > We call it an external local variable, or an upvalue.
+
+  > Simply put, a closure is a function plus all it needs to access
+  > its upvalues correctly.
+
 * dictionary type - a Janet struct or table
 
 * environment - XXX
