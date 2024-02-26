@@ -40,7 +40,9 @@ linguistic peculiarity of English (^^;
 * array - a Janet data structure that is a mutable array.
   XXX: describe literal form?
 
-* binding - XXX: normal(?) and dynamic
+* binding - association between a value and a symbol - XXX: lexical
+  immutable created by `def`, lexical mutable created via `var`, and
+  dynamic mutable changed via `setdyn` (accessed via `dyn`)
 
 * boolean - a Janet data structure with two values, true and false.
 
@@ -50,7 +52,9 @@ linguistic peculiarity of English (^^;
   content, and then finally by another double quote character.  For
   the other form, see "long-buffer".
 
-* cfunction - XXX
+* bytes type - a Janet string, buffer, symbol, or keyword
+
+* c function - XXX
 
 * channel - one of two methods of communication between tasks.  (See
   stream for another.)
@@ -64,7 +68,7 @@ linguistic peculiarity of English (^^;
     between threads.  XXX: limits of the sorts of things that can be
     transferred is not so clear.
 
-* dictionary - either a Janet struct or a Janet table
+* dictionary type - a Janet struct or table
 
 * environment - XXX
 
@@ -91,6 +95,8 @@ linguistic peculiarity of English (^^;
 
 * function - XXX
 
+* indexed type - a Janet array or tuple
+
 * keyword - a Janet data structure consisting of an immutable sequence
   of bytes.  The literal form starts with a colon character.
 
@@ -110,7 +116,7 @@ linguistic peculiarity of English (^^;
 
 * metadata - XXX
 
-* module - XXX
+* module - a collection of bindings and associated environment
 
 * nil - a Janet data structure that represents "no value".
 
@@ -120,9 +126,11 @@ linguistic peculiarity of English (^^;
 
 * peg - parsing expression grammar.  XXX
 
+* peg special - XXX
+
 * prototype table - XXX
 
-* scope - XXX
+* scope - a specific scope is where certain bindings are valid
 
 * signal - a value "raised" by a fiber during its execution.  an
   ancestor fiber that has an appropriate "mask" can trap / block /
