@@ -35,11 +35,22 @@ linguistic peculiarity of English (^^;
 
 ## Terms
 
+* abstract type - XXX
+
+* array - a Janet data structure that is a mutable array.
+  XXX: describe literal form?
+
+* binding - XXX: normal(?) and dynamic
+
+* boolean - a Janet data structure with two values, true and false.
+
 * buffer - a Janet data structure consisting of a mutable sequence of
   bytes.  There are two literal forms.  One form starts with the @
   character, followed by a double quote character, roughly the buffer
   content, and then finally by another double quote character.  For
   the other form, see "long-buffer".
+
+* cfunction - XXX
 
 * channel - one of two methods of communication between tasks.  (See
   stream for another.)
@@ -54,6 +65,8 @@ linguistic peculiarity of English (^^;
     transferred is not so clear.
 
 * dictionary - either a Janet struct or a Janet table
+
+* environment - XXX
 
 * event loop - provides concurrency within a single thread by allowing
   cooperating fibers to yield instead of blocking forward progress.
@@ -76,8 +89,12 @@ linguistic peculiarity of English (^^;
     fiber that was scheduled to run by the event loop" or "a fiber on
     the event loop".
 
+* function - XXX
+
 * keyword - a Janet data structure consisting of an immutable sequence
   of bytes.  The literal form starts with a colon character.
+
+* loader - XXX
 
 * long-buffer - a Janet syntactic literal that when parsed, results in
   a Janet buffer.  A long-buffer starts with the @ character, followed
@@ -89,6 +106,24 @@ linguistic peculiarity of English (^^;
   a Janet string.  A long-string starts and ends with the same number
   of backtick characters.
 
+* macro - XXX
+
+* metadata - XXX
+
+* module - XXX
+
+* nil - a Janet data structure that represents "no value".
+
+* number - a Janet data structure representing a number.  The
+  underlying represention uses IEEE 754 floating point numbers.
+  XXX: there are multiple literal forms.
+
+* peg - parsing expression grammar.  XXX
+
+* prototype table - XXX
+
+* scope - XXX
+
 * signal - a value "raised" by a fiber during its execution.  an
   ancestor fiber that has an appropriate "mask" can trap / block /
   capture (and examine) such values and take some kind of action.
@@ -96,6 +131,8 @@ linguistic peculiarity of English (^^;
   note that this kind of signal is different from a POSIXy system's
   signal.  For that type of signal, see `os/proc-kill` and
   `os/sigaction`.
+
+* special form - XXX
 
 * stream - one of two methods of communication between tasks.  (See
   channel for anotrher.)  They are wrappers around file descriptors
@@ -105,7 +142,7 @@ linguistic peculiarity of English (^^;
 * string - a Janet data structure consisting of an immutable sequence
   of bytes.  There are two literal forms.  One form is bounded at the
   start and end by double quotes.  For the other form, see
-  "long-string".
+  "long-string".  XXX: mention escaping?
 
 * struct - a Janet data structure that is an immutable associative
   array.  The literal form is bounded at the start with an opening
@@ -114,10 +151,15 @@ linguistic peculiarity of English (^^;
 
 * symbol - a Janet data structure consisting of an immutable sequence
   of bytes, typically used for naming other values.  The literal form
-  is the sequence of bytes.
+  is the sequence of bytes.  XXX: mention legal byte sequences?
 
 * table - a Janet data structure that is a mutable associative array.
   XXX: describe literal form?
+
+* thread - XXX
+
+* tuple - a Janet data structure that is an immutable array.  XXX:
+  describe literal forms (square bracket and paren) and typical use?
 
 ## Notes
 
