@@ -35,6 +35,12 @@ linguistic peculiarity of English (^^;
 
 ## Terms
 
+* buffer - a Janet data structure consisting of a mutable sequence of
+  bytes.  There are two literal forms.  One form starts with the @
+  character, followed by a double quote character, roughly the buffer
+  content, and then finally by another double quote character.  For
+  the other form, see "long-buffer".
+
 * channel - one of two methods of communication between tasks.  (See
   stream for another.)
 
@@ -46,6 +52,8 @@ linguistic peculiarity of English (^^;
   * threaded - allows the programmer to communicate Janet values
     between threads.  XXX: limits of the sorts of things that can be
     transferred is not so clear.
+
+* dictionary - either a Janet struct or a Janet table
 
 * event loop - provides concurrency within a single thread by allowing
   cooperating fibers to yield instead of blocking forward progress.
@@ -68,6 +76,19 @@ linguistic peculiarity of English (^^;
     fiber that was scheduled to run by the event loop" or "a fiber on
     the event loop".
 
+* keyword - a Janet data structure consisting of an immutable sequence
+  of bytes.  The literal form starts with a colon character.
+
+* long-buffer - a Janet syntactic literal that when parsed, results in
+  a Janet buffer.  A long-buffer starts with the @ character, followed
+  by some number of backticks, roughly the buffer content, and then
+  ending with the same number of backticks as those that came
+  immediately after the @ character.
+
+* long-string - a Janet syntactic literal that when parsed, results in
+  a Janet string.  A long-string starts and ends with the same number
+  of backtick characters.
+
 * signal - a value "raised" by a fiber during its execution.  an
   ancestor fiber that has an appropriate "mask" can trap / block /
   capture (and examine) such values and take some kind of action.
@@ -80,6 +101,28 @@ linguistic peculiarity of English (^^;
   channel for anotrher.)  They are wrappers around file descriptors
   and operate on streams of bytes.  Streams can communicate across
   threads, processes, and across the network.
+
+* string - a Janet data structure consisting of an immutable sequence
+  of bytes.  There are two literal forms.  One form is bounded at the
+  start and end by double quotes.  For the other form, see
+  "long-string".
+
+* struct - a Janet data structure that is an immutable associative
+  array.  The literal form is bounded at the start with an opening
+  curly brace and at the end by a closing curly brace.  Between the
+  braces there can be an even number of Janet expressions.
+
+* symbol - a Janet data structure consisting of an immutable sequence
+  of bytes, typically used for naming other values.  The literal form
+  is the sequence of bytes.
+
+* table - a Janet data structure that is a mutable associative array.
+  XXX: describe literal form?
+
+## Notes
+
+May not be helpful to be too dry.  Providing specific examples and
+code before definitions may be much more helpful.
 
 ## Credits
 
