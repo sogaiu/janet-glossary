@@ -138,10 +138,13 @@ linguistic peculiarity of English (^^;
 
 * prototype table - XXX
 
+* raise - used in the phrase "raise an error".  XXX: when a fiber
+  "sends" a signal and the signal is an error, "send" == "raise"?
+
 * scope - a specific scope is where certain bindings are valid
 
-* signal - a value "raised" by a fiber during its execution.  an
-  ancestor fiber that has an appropriate "mask" can trap / block /
+* signal - a value "raised" ("sent"?) by a fiber during its execution.
+  an ancestor fiber that has an appropriate "mask" can trap / block /
   capture (and examine) such values and take some kind of action.
 
   note that this kind of signal is different from a POSIXy system's
